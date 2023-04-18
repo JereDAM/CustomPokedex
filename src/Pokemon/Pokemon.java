@@ -1,4 +1,4 @@
-package Pokemon;
+package pokemon;
 
 public class Pokemon {
     private String nombre;
@@ -16,7 +16,8 @@ public class Pokemon {
     }
 
     public Pokemon(String nombre, String tipo){
-
+        this.nombre = nombre;
+        this.tipo = tipo;
     }
 
     public String getNombre(){
