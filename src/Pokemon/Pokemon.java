@@ -1,11 +1,11 @@
 package pokemon;
 
 public class Pokemon {
-    private String nombre;
-    private String tipo;
-    private int altura;
-    private int peso;
-    private String descripcion;
+    protected String nombre;
+    protected String tipo;
+    protected int altura;
+    protected int peso;
+    protected String descripcion;
     
     public  Pokemon(String nombre, String tipo, int altura, int peso, String descripcion) {
         this.nombre = nombre;
