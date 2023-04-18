@@ -55,7 +55,7 @@ public class Pokemon {
 @Override
     public String toString(){
 
-    String mensaje = ("");
+    String mensaje = (" ");
 
     if (nombre != null) {
         mensaje += ("Nombre : " + nombre + "\n");
@@ -70,15 +70,15 @@ public class Pokemon {
     }
 
     if (altura <= 0) {
-    mensaje += ("Altura : ??? " + "\n");
+        mensaje += ("Altura : ??? " + "\n");
     } else {
-    mensaje += ("Altura : " + altura + "\n");
+        mensaje += ("Altura : " + altura + "\n");
     }
 
     if (peso <= 0) {
-    mensaje += ("Peso : ??? " + "\n");
+        mensaje += ("Peso : ??? " + "\n");
     } else {
-    mensaje += ("Peso : " + peso + "\n");
+        mensaje += ("Peso : " + peso + "\n");
     }
 
     if (descripcion != null){
