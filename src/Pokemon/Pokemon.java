@@ -54,33 +54,40 @@ public class Pokemon {
     
 @Override
     public String toString(){
-    String msg = ("");
-    if (nombre == null) {
-    msg += ("Nombre : ? " + "\n");
+
+    String mensaje = ("");
+
+    if (nombre != null) {
+        mensaje += ("Nombre : " + nombre + "\n");
     } else{
-    msg += ("Nombre : " + nombre + "\n");
+        mensaje += ("Nombre : ??? " + "\n");
     }
-    if (tipo == null) {
-    msg += ("Tipo : ? " + "\n");
+
+    if (tipo != null) {
+        mensaje += ("Tipo : " + tipo + "\n");
     } else{
-    msg += ("Tipo : " + tipo + "\n");
+        mensaje += ("Tipo : ??? " + "\n");
     }
+
     if (altura <= 0) {
-    msg += ("Altura : ? " + "\n");
+    mensaje += ("Altura : ??? " + "\n");
     } else {
-    msg += ("Altura : " + altura + "\n");
+    mensaje += ("Altura : " + altura + "\n");
     }
+
     if (peso <= 0) {
-    msg += ("Peso : ? " + "\n");
+    mensaje += ("Peso : ??? " + "\n");
     } else {
-    msg += ("Peso : " + peso + "\n");
+    mensaje += ("Peso : " + peso + "\n");
     }
-    if (descripcion == null){
-    msg += ("Descripción : ? " + "\n");
+
+    if (descripcion != null){
+        mensaje += ("Descripción : " + descripcion + "\n");
     }else{
-    msg += ("Descripción : " + descripcion + "\n");
+        mensaje += ("Descripción : ??? " + "\n");
     }
-    return msg;
+
+    return mensaje;
     }
     
 }
