@@ -18,10 +18,10 @@ public class PokemonLegendario extends Pokemon {
 
     String mensaje = (" ");
 
-    if(nombre != null){
-        mensaje += ("Nombre: " + nombre);
-    }else{
+    if(nombre == null){
         mensaje += ("Nombre: ???" + "\n");
+    }else{
+        mensaje += ("Nombre: " + nombre);
     }
 
     if (tipo != null) {

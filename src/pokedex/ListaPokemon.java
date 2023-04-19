@@ -46,6 +46,10 @@ public class ListaPokemon {
         this.tamanoPokedex = pokemonTotales;
     }
 
+    public Pokemon elPokemon(int numeroPokemon){
+        return (listaPokemon[numeroPokemon - 1]);
+    }
+
     public void mostrarPokedex(){
         int numeroPokemon = 1;
         for(Pokemon miPokemon : this.listaPokemon){

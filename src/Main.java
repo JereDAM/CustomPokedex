@@ -18,7 +18,7 @@ public class Main {
         int peso;
         int altura;
         String descripcion;
-        String localizasion;
+        String localizacion;
         int numeroPokedex;
         int menuRepeticion = -1;
         int opcion;
@@ -43,13 +43,14 @@ public class Main {
                 case 1 :
                     System.out.println("Introduce el nombre del pokémon");
                     nombre = teclado.nextLine();
+                    teclado.nextLine();
                     System.out.println("Introduce el tipo del pokémon");
                     tipo = teclado.nextLine();
 
                     Pokemon Pkmn = new Pokemon(nombre,tipo);
                     pkmnAvistados.anadirPokemon(Pkmn);
 
-                    System.out.println("\n" + "Pokemon avistado " + "\n");
+                    System.out.println("************************Pokemon avistado*************************** ");
                     break;
                 
                 case 2 :
@@ -58,12 +59,47 @@ public class Main {
                     System.out.println("Introduce el tipo del pokémon legendario");
                     tipo = teclado.nextLine();
                     System.out.println("Introduce la localización del pokémon legendario");
-                    localizasion = teclado.nextLine();
+                    localizacion = teclado.nextLine();
 
                     PokemonLegendario pkmnLegendario = new PokemonLegendario(nombre, tipo, localizacion);
+
+                    pkmnAvistados.anadirPokemon(pkmnLegendario);
+                    System.out.println("Pokemon legendario avistado");
+                    break;
+                
+                case 3:
+                    System.out.println("Introduce el numero del pokémon capturado");
+                    pkmnAvistados.mostrarPokedex();
+                    numeroPokedex = teclado.nextInt();
+
+                    Pokemon pokemonCapturado = pkmnAvistados.elPokemon(numeroPokedex);
+                    pkmnCapturados.anadirPokemon(pokemonCapturado);
+                    pkmnAvistados.eliminarPokemon(pokemonCapturado);
+                    System.out.println("Introduce el peso del pokemon capturado");
+                    peso = teclado.nextInt();
+                    pokemonCapturado.setpeso(peso);
+                    System.out.println("Introduce la altura del pokémon capturado");
+                    altura = teclado.nextInt();
+                    pokemonCapturado.setAltura(altura);
+                    System.out.println("Introduce la descripción del pokémon");
+                    descripcion = teclado.nextLine();
+                    pokemonCapturado.setDescripcion(descripcion);
+                    break;
+                
+                case 4:
+                    pkmnAvistados.mostrarPokedex();
+                    break;
+                
+                case 5:
+                    pkmnCapturados.mostrarPokedex();
+                    break;
+
+                case  6:
+                    menuRepeticion = 0;
                     break;
             
                 default:
+                    System.out.println("Eso no es una opción >:(");
                     break;
             }
         }

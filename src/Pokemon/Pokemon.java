@@ -58,14 +58,14 @@ public class Pokemon {
 
     String mensaje = (" ");
 
-    if (nombre != null) {
-        mensaje += ("Nombre : " + nombre + "\n");
-    } else{
+    if (nombre == null) {
         mensaje += ("Nombre : ??? " + "\n");
+    } else{
+        mensaje += ("Nombre : " + nombre + "\n"); //No sé por qué no se muestra por consola
     }
 
     if (tipo != null) {
-        mensaje += ("Tipo : " + tipo + "\n");
+        mensaje += ("Tipo : " + this.tipo + "\n");
     } else{
         mensaje += ("Tipo : ??? " + "\n");
     }
