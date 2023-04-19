@@ -4,8 +4,12 @@ import pokemon.Pokemon;
 public class PokemonLegendario extends Pokemon {
     private String localizacion;
 
-    public PokemonLegendario(String nombre, String tipo, int altura, int peso, String descripcion, String localizacion) {
+    public PokemonLegendario(String nombre, String tipo, int altura, int peso, String descripcion) {
         super(nombre, tipo, altura, peso, descripcion);
+    }
+
+    public PokemonLegendario(String nombre, String tipo, String localizacion) {
+        super(nombre, tipo);
         this.localizacion = localizacion;
     }
 
